@@ -21,6 +21,18 @@
     <ClCompile Include="extlibs\glm-0.9.9.8\glm\glm\detail\glm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\image_DXT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\image_helper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\SOIL2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\wfETC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="extlibs\glfw-3.3.8.bin.WIN64\include\GLFW\glfw3.h">
@@ -885,6 +897,63 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="extlibs\glm-0.9.9.8\glm\glm\vector_relational.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\image_DXT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\image_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\pkm_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\pvr_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\SOIL2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stb_image_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_DDS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_DDS_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_ext_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pkm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pkm_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pvr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pvr_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_qoi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_qoi_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_qoi_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\wfETC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

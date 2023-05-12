@@ -110,15 +110,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)extlibs\glew-2.1.0-win32\include;$(SolutionDir)extlibs\glm-0.9.9.8\glm</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)extlibs\glew-2.1.0-win32\include;$(SolutionDir)extlibs\glm-0.9.9.8\glm;$(SolutionDir)extlibs\SOIL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(SolutionDir)extlibs\glew-2.1.0-win32\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(SolutionDir)extlibs\glew-2.1.0-win32\lib\Release\x64;$(SolutionDir)extlibs\SOIL2\lib\windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;soil2-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y "$(SolutionDir)\extlibs\glew-2.1.0-win32\bin\Release\x64\glew32.dll" "$(SolutionDir)\bin\$(Platform)\$(Configuration)\glew32.dll"</Command>
@@ -130,17 +130,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)extlibs\glew-2.1.0-win32\include;$(SolutionDir)extlibs\glm-0.9.9.8\glm</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)extlibs\glew-2.1.0-win32\include;$(SolutionDir)extlibs\glm-0.9.9.8\glm;$(SolutionDir)extlibs\SOIL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(SolutionDir)extlibs\glew-2.1.0-win32\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)extlibs\glfw-3.3.8.bin.WIN64\lib-vc2022;$(SolutionDir)extlibs\glew-2.1.0-win32\lib\Release\x64;$(SolutionDir)extlibs\SOIL2\lib\windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy /Y "$(SolutionDir)\extlibs\glew-2.1.0-win32\bin\Release\x64\glew32.dll" "$(SolutionDir)\bin\$(Platform)\$(Configuration)\glew32.dll"</Command>
@@ -148,6 +148,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="extlibs\glm-0.9.9.8\glm\glm\detail\glm.cpp" />
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\image_DXT.c" />
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\image_helper.c" />
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\SOIL2.c" />
+    <ClCompile Include="extlibs\SOIL2\include\SOIL2\wfETC.c" />
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -439,6 +443,25 @@
     <ClInclude Include="extlibs\glm-0.9.9.8\glm\glm\vec3.hpp" />
     <ClInclude Include="extlibs\glm-0.9.9.8\glm\glm\vec4.hpp" />
     <ClInclude Include="extlibs\glm-0.9.9.8\glm\glm\vector_relational.hpp" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\image_DXT.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\image_helper.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\pkm_helper.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\pvr_helper.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\SOIL2.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_DDS.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_DDS_c.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_ext.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_ext_c.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pkm.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pkm_c.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pvr.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_pvr_c.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_qoi.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_qoi_c.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stbi_qoi_write.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stb_image.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\stb_image_write.h" />
+    <ClInclude Include="extlibs\SOIL2\include\SOIL2\wfETC.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="extlibs\glm-0.9.9.8\glm\glm\detail\func_common.inl" />

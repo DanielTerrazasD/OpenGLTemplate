@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <glm/gtx/dual_quaternion.hpp>
+#include <SOIL2/SOIL2.h>
 
 int main(int argv, const char* argc[]) { 
 
